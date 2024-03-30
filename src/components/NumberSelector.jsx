@@ -1,10 +1,12 @@
 import styled from "styled-components"
-const NumberSelector = ({selectedNumber ,setSelectedNumber}) => {
+const NumberSelector = ({selectedNumber ,setSelectedNumber, error, setError}) => {
   const arrNumbers = [1, 2, 3, 4, 5, 6];
   console.log(selectedNumber);
+  if(selectedNumber) setError("");
   
   return (
-    <NumberSelectedContainer>     
+    <NumberSelectedContainer>
+      <p className="error">{error}</p>     
       <div className="flex">
       {
         arrNumbers.map((val, i) => (
@@ -33,10 +35,15 @@ const NumberSelectedContainer = styled.div`
     display: flex;
     gap: 24px;
   }
+
   p{
     font-size: 24px;
     font-weight: 700;
   }
+  
+  .error {
+      color: red;
+    }
 `;
 
 const Box = styled.div`

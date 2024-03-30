@@ -1,15 +1,8 @@
 import styled from "styled-components";
 
-const RoleDice = ({currentDice, setCurrentDice}) => {
+const RoleDice = ({currentDice, roleDice}) => {
 
-  const generateRandomNumber = (min, max) => {
-    return Math.round(Math.random() * (max - min) + min);
-  }
 
-  const roleDice = () => {
-    const randomNumber = generateRandomNumber(1, 6);
-    setCurrentDice(() => randomNumber);
-  }
 
   console.log(currentDice);
 
