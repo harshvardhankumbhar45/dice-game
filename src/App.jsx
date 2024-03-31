@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import './App.css';
 import StartGame from './components/StartGame';
 import { useState } from 'react';
